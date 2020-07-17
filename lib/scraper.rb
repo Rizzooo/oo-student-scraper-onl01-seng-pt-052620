@@ -8,7 +8,8 @@ class Scraper
     student_info = html.css('div.student-card')
     student_info.map do |stud|
       { name: stud.css('div.card-text-container h4.student-name')
-      location: stud.css('div.')
+      location: stud.css('div.card-text-container p.student-location')
+      
   end
 
   def self.scrape_profile_page(profile_url)
