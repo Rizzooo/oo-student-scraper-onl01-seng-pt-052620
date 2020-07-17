@@ -7,7 +7,7 @@ class Scraper
     html = Nokogiri::HTML(open(index_url))
     student_info = html.css('div.student-card')
     student_info.map do |stud|
-      { name: html.css('')
+      { name: stud.css('dev')
   end
 
   def self.scrape_profile_page(profile_url)
