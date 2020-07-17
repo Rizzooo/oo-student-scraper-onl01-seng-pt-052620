@@ -11,6 +11,7 @@ class Scraper
       location: stud.css('div.card-text-container p.student-location')
       profile_url: stud.css('a')[0]['href']
       }
+    end
   end
 
   def self.scrape_profile_page(profile_url)
