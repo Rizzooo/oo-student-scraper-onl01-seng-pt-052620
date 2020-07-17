@@ -8,8 +8,8 @@ class Scraper
     student_info = html.css('div.student-card')
     student_info.map do |stud|
       {:name stud.css('div.card-text-container h4.student-name')
-      :location: stud.css('div.card-text-container p.student-location')
-      :profile_url: stud.css('a')[0]['href']
+      :location stud.css('div.card-text-container p.student-location')
+      :profile_url stud.css('a')[0]['href']
       }
     end
   end
